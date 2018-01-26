@@ -66,13 +66,13 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    $ mkvirtualenv {{ cookiecutter.project_slug }}
     $ cd {{ cookiecutter.project_slug }}/
-    $ python setup.py develop
+    $ conda env create -f requirements_dev.yml
+    $ pip install -e .
 
 4. Create a branch for local development::
 
-    $ git checkout -b name-of-your-bugfix-or-feature
+    $ git flow feature start name-of-your-bugfix-or-feature
 
    Now you can make your changes locally.
 
