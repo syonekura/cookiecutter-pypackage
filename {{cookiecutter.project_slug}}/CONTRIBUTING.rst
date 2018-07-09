@@ -67,8 +67,8 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
     $ cd {{ cookiecutter.project_slug }}/
-    $ conda env create -f requirements_dev.yml
-    $ pip install -e .
+    $ conda env create -n {{ cookiecutter.project_slug }}
+    $ pip install -f requirements.txt
 
 4. Create a branch for local development::
 
